@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://dmyp8gwn1ehau"]
+
+[ext_resource type="Texture2D" uid="uid://bcee5syvrxkwk" path="res://assets/hamburguer.png" id="1_703bv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qvvgy"]
+
+[node name="burguer" type="Area2D"]
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_qvvgy")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("1_703bv")

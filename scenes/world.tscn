@@ -1,14 +1,22 @@
-[gd_scene load_steps=3 format=3 uid="uid://dwj5ixvm5xd0e"]
+[gd_scene load_steps=5 format=3 uid="uid://dwj5ixvm5xd0e"]
 
 [ext_resource type="PackedScene" uid="uid://c2woyananrkj" path="res://scenes/player.tscn" id="1_7kj44"]
+[ext_resource type="Script" path="res://scripts/world.gd" id="1_frw8j"]
 [ext_resource type="PackedScene" uid="uid://bwatuk05jcxxx" path="res://scenes/floor.tscn" id="2_y6kf6"]
+[ext_resource type="PackedScene" uid="uid://dmyp8gwn1ehau" path="res://scenes/burguer.tscn" id="4_s4rx1"]
 
 [node name="world" type="Node2D"]
+script = ExtResource("1_frw8j")
 
 [node name="player" parent="." instance=ExtResource("1_7kj44")]
-position = Vector2(1347, 703)
+position = Vector2(356, 307)
 
 [node name="chao" parent="." instance=ExtResource("2_y6kf6")]
-visible = false
-position = Vector2(529, 723)
+position = Vector2(1323, 806)
 metadata/_edit_group_ = true
+
+[node name="burguer" parent="." instance=ExtResource("4_s4rx1")]
+position = Vector2(-3.00002, 200)
+scale = Vector2(5, 5)
+
+[connection signal="body_entered" from="burguer" to="player" method="_on_burguer_body_entered"]

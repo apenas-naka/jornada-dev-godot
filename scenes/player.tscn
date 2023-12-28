@@ -20,3 +20,9 @@ shape = SubResource("RectangleShape2D_k6ecp")
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(0.8, 0.8)
 position_smoothing_enabled = true
+
+[node name="hungryTimer" type="Timer" parent="."]
+wait_time = 7.0
+autostart = true
+
+[connection signal="timeout" from="hungryTimer" to="." method="_on_hungry_timer_timeout"]
