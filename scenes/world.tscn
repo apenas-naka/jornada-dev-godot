@@ -1,3 +1,14 @@
-[gd_scene format=3 uid="uid://dwj5ixvm5xd0e"]
+[gd_scene load_steps=3 format=3 uid="uid://dwj5ixvm5xd0e"]
+
+[ext_resource type="PackedScene" uid="uid://c2woyananrkj" path="res://scenes/player.tscn" id="1_7kj44"]
+[ext_resource type="PackedScene" uid="uid://bwatuk05jcxxx" path="res://scenes/floor.tscn" id="2_y6kf6"]
 
 [node name="world" type="Node2D"]
+
+[node name="player" parent="." instance=ExtResource("1_7kj44")]
+position = Vector2(1347, 703)
+
+[node name="chao" parent="." instance=ExtResource("2_y6kf6")]
+visible = false
+position = Vector2(529, 723)
+metadata/_edit_group_ = true

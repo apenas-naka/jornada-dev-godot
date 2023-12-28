@@ -1,0 +1,22 @@
+1 - Player;
+	1.1 - Movimentação - FEITO;
+	1.2 - Colisão com objeto - FEITO;
+	
+2 - Ambientação;
+	1.1 - Prototipo de mapa - FAZER PROTÓTIPO;
+	1.2 - Configurar colisões - FAZER PROTÓTIPO;
+	1.3 - Polir mapa - FAZER PROTÓTIPO;
+
+3 - Jogabilidade;
+	1.1 - Sistema de fome - COMEÇANDO (1%);
+		DESCRIÇÃO: (cronometro) a cada 7 segundos o jogador perde 1 barra
+			de fome (total de 5).
+	1.2 - Spawn de x-burguers - FAZER PROTÓTIPO;
+		DESCRIÇÃO: Quando todos os x-burguers do mapa forem coletados, deve
+			spawnar mais objetos para que o jogador se alimente.
+	1.2 - Contador de pontos - FAZER PROTÓTIPO;
+		DESCRIÇÃO: Sempre que o jogador limpar o mapa, ganha 100 pontos.
+	1.3 - Sistema de morte - FAZER PROTÓTIPO;
+		DESCRIÇÃO:	Quando a barra de fome chegar em 0, inicia uma contagem
+			de 3 segundos, se o jogador não se alimentar nesse tempo, morre.
+	
