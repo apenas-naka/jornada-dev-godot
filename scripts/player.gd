@@ -1,8 +1,9 @@
+class_name PlayerInfo;
 extends CharacterBody2D;
 
 @export var playerSpeed : int = 400;
 @export var playerHungry : int = 5;
-@onready var playerCollectable := $"../burguer";
+#@onready var playerCollectable := $"../burguer";
 
 
 func get_input():
@@ -23,6 +24,9 @@ func _on_hungry_timer_timeout():
 	if playerHungry < 1:
 		print("Você morreu de fome!");
 
+func _input(event):
+	if event.is_action_released("test_key_J"):
+		print("Você apertou J");
 
 #func _on_burguer_body_entered(body):
 	#if body.name == "player":
