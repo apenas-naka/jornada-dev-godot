@@ -6,7 +6,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qvvgy"]
 
 [node name="burguer" type="Area2D"]
-scale = Vector2(5, 5)
+scale = Vector2(2, 2)
 script = ExtResource("1_bdi7b")
 metadata/_edit_group_ = true
 

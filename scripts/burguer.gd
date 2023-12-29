@@ -6,4 +6,5 @@ func _on_body_entered(body):
 		queue_free();
 	else:
 		print("Colidiu em algo")
-		
+		queue_free();
+		print("Limpando");
