@@ -1,0 +1,65 @@
+[gd_scene load_steps=2 format=3 uid="uid://cgfmuvum3wcpp"]
+
+[ext_resource type="Texture2D" uid="uid://c2wmeg5kkwbe8" path="res://assets/label_bg.png" id="1_uax5u"]
+
+[node name="Interface" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Control" type="NinePatchRect" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+patch_margin_left = 10
+patch_margin_top = 10
+patch_margin_right = 10
+patch_margin_bottom = 10
+
+[node name="bgControlLabel" type="NinePatchRect" parent="CanvasLayer/Control"]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 16.0
+offset_right = 238.0
+offset_bottom = 178.0
+texture = ExtResource("1_uax5u")
+patch_margin_left = 10
+patch_margin_top = 10
+patch_margin_right = 10
+patch_margin_bottom = 10
+metadata/_edit_group_ = true
+
+[node name="hungryLabel" type="Label" parent="CanvasLayer/Control/bgControlLabel"]
+layout_mode = 0
+offset_left = 51.0
+offset_top = 36.0
+offset_right = 116.0
+offset_bottom = 59.0
+text = "VIDA: 99"
+
+[node name="fatLabel" type="Label" parent="CanvasLayer/Control/bgControlLabel"]
+layout_mode = 0
+offset_left = 51.0
+offset_top = 65.0
+offset_right = 157.0
+offset_bottom = 88.0
+text = "GORDURA: 56"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="fatLabel2" type="Label" parent="CanvasLayer/Control/bgControlLabel"]
+layout_mode = 0
+offset_left = 51.0
+offset_top = 91.0
+offset_right = 157.0
+offset_bottom = 114.0
+text = "PONTOS: 500"
+horizontal_alignment = 1
+vertical_alignment = 1

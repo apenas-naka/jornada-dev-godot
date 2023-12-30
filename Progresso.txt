@@ -22,7 +22,7 @@
 	1.3 - Sistema de morte - FAZER PROTÓTIPO;
 		DESCRIÇÃO:	Quando a barra de fome chegar em 0, inicia uma contagem
 			de 3 segundos, se o jogador não se alimentar nesse tempo, morre.
-4 - USER INTERFACE;
+4 - USER INTERFACE - INICIANDO;
 	1.1 - Sistema de Pontos - FAZER PROTÓTIPO;
 	1.2 - Status (fome, tempo, pontos) - FAZER PROTÓTIPO;
 
