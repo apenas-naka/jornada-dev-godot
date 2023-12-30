@@ -11,7 +11,7 @@
 	1.1 - Sistema de fome - FEITO PROTÓTIPO;
 		DESCRIÇÃO: (cronometro) a cada 7 segundos o jogador perde 1 barra
 			de fome (total de 5).
-	1.2 - Spawn de x-burguers - NECESSITA AJUSTES;
+	1.2 - Spawn de x-burguers - QUASE LÁ...;
 		DESCRIÇÃO: Quando todos os x-burguers do mapa forem coletados, deve
 			spawnar mais objetos para que o jogador se alimente.
 		1.2.1 - Criar o coletável - FEITO;

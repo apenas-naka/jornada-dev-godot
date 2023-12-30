@@ -24,4 +24,8 @@ texture = ExtResource("1_703bv")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="checkColl"]
 shape = SubResource("RectangleShape2D_kxr0l")
 
+[node name="visibilityTimer" type="Timer" parent="."]
+wait_time = 1.5
+
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="timeout" from="visibilityTimer" to="." method="_on_visibility_timer_timeout"]
