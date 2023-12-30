@@ -18,7 +18,7 @@ position = Vector2(-0.5, 1)
 shape = SubResource("RectangleShape2D_k6ecp")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(0.4, 0.4)
+zoom = Vector2(0.2, 0.2)
 position_smoothing_enabled = true
 
 [node name="hungryTimer" type="Timer" parent="."]

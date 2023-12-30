@@ -6,6 +6,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qvvgy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kxr0l"]
+size = Vector2(24.2857, 26)
 
 [node name="burguer" type="Area2D"]
 scale = Vector2(3.5, 3.5)
@@ -20,8 +21,15 @@ scale = Vector2(1.5, 1.5)
 texture = ExtResource("1_703bv")
 
 [node name="checkColl" type="Area2D" parent="."]
+metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="checkColl"]
+position = Vector2(-0.1, -0.1)
 shape = SubResource("RectangleShape2D_kxr0l")
 
+[node name="visibilityTimer" type="Timer" parent="."]
+wait_time = 1.5
+
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="area_entered" from="checkColl" to="." method="_on_check_coll_area_entered"]
+[connection signal="timeout" from="visibilityTimer" to="." method="_on_visibility_timer_timeout"]

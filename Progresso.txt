@@ -11,15 +11,23 @@
 	1.1 - Sistema de fome - FEITO PROTÓTIPO;
 		DESCRIÇÃO: (cronometro) a cada 7 segundos o jogador perde 1 barra
 			de fome (total de 5).
-	1.2 - Spawn de x-burguers - NECESSITA AJUSTES;
+	1.2 - Spawn de x-burguers - FEITO;
 		DESCRIÇÃO: Quando todos os x-burguers do mapa forem coletados, deve
 			spawnar mais objetos para que o jogador se alimente.
 		1.2.1 - Criar o coletável - FEITO;
-		1.2.2 - Aumentar quantidade de spawn - FAZER;
-		1.2.3 - Limitar a distancia de spawn - FAZER;
+		1.2.2 - Aumentar quantidade de spawn - FEITO;
+		1.2.3 - Limitar a distancia de spawn - FEITO;
 	1.2 - Contador de pontos - FAZER PROTÓTIPO;
 		DESCRIÇÃO: Sempre que o jogador limpar o mapa, ganha 100 pontos.
 	1.3 - Sistema de morte - FAZER PROTÓTIPO;
 		DESCRIÇÃO:	Quando a barra de fome chegar em 0, inicia uma contagem
 			de 3 segundos, se o jogador não se alimentar nesse tempo, morre.
-	
+4 - USER INTERFACE;
+	1.1 - Sistema de Pontos - FAZER PROTÓTIPO;
+	1.2 - Status (fome, tempo, pontos) - FAZER PROTÓTIPO;
+
+5 - IDEIAS:
+	1: Obesidade - Quanto mais o jogador come sem se movimentar tanto, maior aumenta
+		o atributo 'gordura', se chegar ao máximo, morre;
+	1.1: Corrida -	Corra para aumentar a velocidade, além de diminuir o status de 'gordura'
+		um limite para corrida (??) 
