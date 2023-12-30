@@ -1,13 +1,12 @@
 extends Node2D
 
 const myCollectable = preload("res://scenes/burguer.tscn");
-#const limitsOfCollectables = 5;
 
-func _on_spawn_collectables_timeout():	# QUANDO O TIMER spawnCol. acabar:
+func _on_spawn_collectables_timeout():	# QUANDO O TIMER 'spawnCollectables' ZERAR
 	var rng = RandomNumberGenerator.new();
 
-	var pos_x = rng.randf_range(400, 700);
-	var pos_y = rng.randf_range(80, 800);
+	var pos_x = rng.randf_range(-500, 500);
+	var pos_y = rng.randf_range(-800, 800);
 
 	var spawned_Obj = myCollectable.instantiate();
 	spawned_Obj.global_position.x = pos_x;
