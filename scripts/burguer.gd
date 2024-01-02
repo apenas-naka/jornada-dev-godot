@@ -12,6 +12,9 @@ func _on_body_entered(body):	#COLISÃO COM O ITEM
 		#print("REMOVIDO");
 	if body.is_in_group("player"):	# SE ESTIVER NO GRUPO 'player'
 		#print("Coletado pelo jogador!");
+		#Player.playerHungry += 10;
+		#Player.playerPoints += 40;
+		
 		queue_free();
 		
 func _on_visibility_timer_timeout():	# QUANDO O TEMPO ACABAR

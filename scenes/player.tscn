@@ -22,7 +22,7 @@ zoom = Vector2(0.2, 0.2)
 position_smoothing_enabled = true
 
 [node name="hungryTimer" type="Timer" parent="."]
-wait_time = 7.0
+wait_time = 4.0
 autostart = true
 
 [connection signal="timeout" from="hungryTimer" to="." method="_on_hungry_timer_timeout"]
