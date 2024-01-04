@@ -1,10 +1,14 @@
 extends Node;
 
-const myCollectable = preload("res://scenes/burguer.tscn");
-@onready var playerHungry : int = 50;
+const myCollectable = preload("res://scenes/collectable.tscn");
+#	VARIAVEIS DO PLAYER
+@onready var playerHungry : int = 10;
 @onready var playerStamina : int = 50;
 @onready var playerPoints : int = 0;
 @onready var bonus_multiplier : int = 1;
+#	REFERENCIA DE VARIAVEIS (RESTART GAME)
+@onready var hungryRef = playerHungry;
+@onready var staRef = playerStamina;
 
 func _on_spawn_collectables_timeout():	# QUANDO O TIMER 'spawnCollectables' ZERAR
 	var rng = RandomNumberGenerator.new();	#Gerar novo numero aleatorio;

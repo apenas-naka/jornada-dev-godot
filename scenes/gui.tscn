@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://cgfmuvum3wcpp"]
 
-[ext_resource type="Texture2D" uid="uid://c2wmeg5kkwbe8" path="res://assets/label_bg.png" id="1_uax5u"]
+[ext_resource type="Texture2D" uid="uid://c2wmeg5kkwbe8" path="res://art/etc/label_bg.png" id="1_uax5u"]
 [ext_resource type="Script" path="res://scripts/gui.gd" id="1_xdoy7"]
 
 [node name="GUI" type="Control"]

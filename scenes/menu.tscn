@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://s3ahto55gony"]
+[gd_scene load_steps=3 format=3 uid="uid://s3ahto55gony"]
 
 [ext_resource type="Script" path="res://scripts/menu.gd" id="1_b07i0"]
+[ext_resource type="Theme" uid="uid://baoufyvwhelbn" path="res://art/default.tres" id="2_fvioe"]
 
 [node name="Menu" type="Control"]
 layout_mode = 3
@@ -29,9 +30,10 @@ anchor_bottom = 0.5
 offset_left = -70.0
 offset_top = -15.5
 offset_right = 70.0
-offset_bottom = 15.5
+offset_bottom = 17.5
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("2_fvioe")
 text = "Play"
 
 [node name="Quit" type="Button" parent="Control"]
@@ -42,11 +44,12 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -70.0
-offset_top = 98.0
+offset_top = 42.0
 offset_right = 71.0
-offset_bottom = 129.0
+offset_bottom = 73.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("2_fvioe")
 text = "Quit"
 
 [connection signal="button_up" from="Control/Play" to="." method="_on_play_button_up"]

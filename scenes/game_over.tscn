@@ -1,0 +1,38 @@
+[gd_scene load_steps=3 format=3 uid="uid://dv38li555u4x0"]
+
+[ext_resource type="Theme" uid="uid://baoufyvwhelbn" path="res://art/default.tres" id="1_1m13q"]
+[ext_resource type="Script" path="res://scripts/game_over.gd" id="1_td1mj"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_td1mj")
+metadata/_edit_horizontal_guides_ = [333.0]
+
+[node name="Label" type="Label" parent="."]
+offset_left = 555.0
+offset_top = 269.0
+offset_right = 670.0
+offset_bottom = 292.0
+theme = ExtResource("1_1m13q")
+text = "VOCÊ MORREU"
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="Restart" type="Button" parent="."]
+offset_left = 656.0
+offset_top = 334.0
+offset_right = 764.0
+offset_bottom = 365.0
+theme = ExtResource("1_1m13q")
+text = "Restart"
+
+[node name="Quit" type="Button" parent="."]
+offset_left = 453.0
+offset_top = 335.0
+offset_right = 572.0
+offset_bottom = 366.0
+theme = ExtResource("1_1m13q")
+text = "Quit"
+
+[connection signal="button_up" from="Restart" to="." method="_on_restart_button_up"]
+[connection signal="button_up" from="Quit" to="." method="_on_quit_button_up"]
