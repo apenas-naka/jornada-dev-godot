@@ -99,7 +99,7 @@ autostart = true
 wait_time = 4.0
 autostart = true
 
-[node name="Collectables" type="Node2D" parent="." groups=["player"]]
+[node name="Collectables" type="Node2D" parent="." groups=["collectables"]]
 
 [node name="burguer" parent="Collectables" instance=ExtResource("3_4pb15")]
 visible = false

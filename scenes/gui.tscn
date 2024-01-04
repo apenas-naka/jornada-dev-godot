@@ -13,6 +13,7 @@ grow_vertical = 2
 script = ExtResource("1_xdoy7")
 metadata/_edit_vertical_guides_ = [145.0]
 metadata/_edit_horizontal_guides_ = [140.0]
+metadata/_edit_group_ = true
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -41,7 +42,7 @@ offset_bottom = 42.0
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="fatLabel" type="Label" parent="CanvasLayer/TextureRect/bgControlLabel"]
+[node name="staminaLabel" type="Label" parent="CanvasLayer/TextureRect/bgControlLabel"]
 layout_mode = 0
 offset_left = 11.0
 offset_top = 49.0

@@ -11,7 +11,9 @@ func _on_body_entered(body):	#COLISÃO COM O ITEM
 		queue_free();
 		#print("REMOVIDO");
 	if body.is_in_group("player"):	# SE ESTIVER NO GRUPO 'player'
-		#print("Coletado pelo jogador!");
+		print("Coletado pelo jogador!");
+		Game.playerHungry += 200;
+		#Gui.hungryRef += 300;
 		#hungryRef
 		#Gui._on_update_score_timeout().hungryRef += 500;
 		queue_free();
