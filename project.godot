@@ -33,6 +33,10 @@ folder_colors={
 "res://sound/": "purple"
 }
 
+[filesystem]
+
+import/blender/enabled=false
+
 [input]
 
 move_up={
