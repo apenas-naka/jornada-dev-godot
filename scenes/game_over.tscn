@@ -3,36 +3,74 @@
 [ext_resource type="Theme" uid="uid://baoufyvwhelbn" path="res://art/default.tres" id="1_1m13q"]
 [ext_resource type="Script" path="res://scripts/game_over.gd" id="1_td1mj"]
 
-[node name="Node2D" type="Node2D"]
+[node name="deathScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 script = ExtResource("1_td1mj")
 metadata/_edit_horizontal_guides_ = [333.0]
 
-[node name="Label" type="Label" parent="."]
-offset_left = 555.0
-offset_top = 269.0
-offset_right = 670.0
-offset_bottom = 292.0
+[node name="Control" type="NinePatchRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Control"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -57.5
+offset_top = -135.0
+offset_right = 57.5
+offset_bottom = -112.0
+grow_horizontal = 2
+grow_vertical = 2
 theme = ExtResource("1_1m13q")
 text = "VOCÊ MORREU"
 horizontal_alignment = 1
 vertical_alignment = 1
 uppercase = true
 
-[node name="Restart" type="Button" parent="."]
-offset_left = 656.0
-offset_top = 334.0
-offset_right = 764.0
-offset_bottom = 365.0
+[node name="Restart" type="Button" parent="Control"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -70.0
+offset_top = -52.0
+offset_right = 70.0
+offset_bottom = -22.0
+grow_horizontal = 2
+grow_vertical = 2
 theme = ExtResource("1_1m13q")
 text = "Restart"
 
-[node name="Quit" type="Button" parent="."]
-offset_left = 453.0
-offset_top = 335.0
-offset_right = 572.0
-offset_bottom = 366.0
+[node name="Quit" type="Button" parent="Control"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -70.0
+offset_top = 54.0
+offset_right = 70.0
+offset_bottom = 84.0
+grow_horizontal = 2
+grow_vertical = 2
 theme = ExtResource("1_1m13q")
 text = "Quit"
 
-[connection signal="button_up" from="Restart" to="." method="_on_restart_button_up"]
-[connection signal="button_up" from="Quit" to="." method="_on_quit_button_up"]
+[connection signal="button_up" from="Control/Restart" to="." method="_on_restart_button_up"]
+[connection signal="button_up" from="Control/Quit" to="." method="_on_quit_button_up"]

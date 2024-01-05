@@ -10,7 +10,11 @@ config_version=5
 
 [application]
 
-config/name="jornadadev"
+config/name="Bruce, the Cat"
+config/name_localized={
+"pt_BR": "Bruce, o Gato"
+}
+config/version="1.0"
 run/main_scene="res://scenes/menu.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
 config/icon="res://icon.svg"
@@ -23,6 +27,8 @@ Game="*res://scripts/game.gd"
 
 window/size/viewport_width=1280
 window/size/viewport_height=600
+window/size/mode=3
+window/size/resizable=false
 
 [file_customization]
 
