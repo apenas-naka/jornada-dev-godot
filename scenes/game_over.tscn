@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://dv38li555u4x0"]
+[gd_scene load_steps=5 format=3 uid="uid://dv38li555u4x0"]
 
 [ext_resource type="Theme" uid="uid://baoufyvwhelbn" path="res://art/default.tres" id="1_1m13q"]
 [ext_resource type="Script" path="res://scripts/game_over.gd" id="1_td1mj"]
+[ext_resource type="Texture2D" uid="uid://bt8cd8lo34jmg" path="res://art/etc/background.png" id="2_s38lv"]
+[ext_resource type="AudioStream" uid="uid://dp7e5t14acdxx" path="res://sound/Track 2.wav" id="4_pl2tj"]
 
 [node name="deathScreen" type="Control"]
 layout_mode = 3
@@ -20,6 +22,16 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="background" type="TextureRect" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_s38lv")
 
 [node name="Label" type="Label" parent="Control"]
 layout_mode = 1
@@ -28,10 +40,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -57.5
-offset_top = -135.0
-offset_right = 57.5
-offset_bottom = -112.0
+offset_left = -55.0
+offset_top = 41.0
+offset_right = 60.0
+offset_bottom = 64.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_1m13q")
@@ -47,10 +59,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -70.0
-offset_top = -52.0
-offset_right = 70.0
-offset_bottom = -22.0
+offset_left = -68.0
+offset_top = 75.0
+offset_right = 72.0
+offset_bottom = 105.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_1m13q")
@@ -63,14 +75,19 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -70.0
-offset_top = 54.0
-offset_right = 70.0
-offset_bottom = 84.0
+offset_left = -68.0
+offset_top = 128.0
+offset_right = 72.0
+offset_bottom = 158.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_1m13q")
 text = "Quit"
+
+[node name="MusicMenu" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_pl2tj")
+volume_db = -25.0
+autoplay = true
 
 [connection signal="button_up" from="Control/Restart" to="." method="_on_restart_button_up"]
 [connection signal="button_up" from="Control/Quit" to="." method="_on_quit_button_up"]

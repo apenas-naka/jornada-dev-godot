@@ -10,13 +10,11 @@ config_version=5
 
 [application]
 
-config/name="Bruce, the Cat"
-config/name_localized={
-"pt_BR": "Bruce, o Gato"
-}
+config/name="Larica Men"
 config/version="1.0"
 run/main_scene="res://scenes/menu.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
+boot_splash/use_filter=false
 config/icon="res://icon.svg"
 
 [autoload]
@@ -25,8 +23,8 @@ Game="*res://scripts/game.gd"
 
 [display]
 
-window/size/viewport_width=1280
-window/size/viewport_height=600
+window/size/viewport_width=640
+window/size/viewport_height=360
 window/size/mode=3
 window/size/resizable=false
 

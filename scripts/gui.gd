@@ -2,9 +2,9 @@ extends Control
 
 @onready var gameOver = preload("res://scenes/game_over.tscn");
 	
-@onready var labelHungry = get_node("CanvasLayer/TextureRect/bgControlLabel/hungryLabel"); 
-@onready var labelStamina = get_node("CanvasLayer/TextureRect/bgControlLabel/staminaLabel");
-@onready var labelPoints = get_node("CanvasLayer/TextureRect/bgControlLabel/pointsLabel"); 
+@onready var labelHungry = get_node("CanvasLayer/bgControlLabel/hungryLabel"); 
+@onready var labelStamina = get_node("CanvasLayer/bgControlLabel/staminaLabel");
+@onready var labelPoints = get_node("CanvasLayer/bgControlLabel/pointsLabel"); 
 
 func _process(_delta):
 	if Game.playerHungry <= 0:	# SE A FOME ZERAR, MORRE!

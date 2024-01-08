@@ -1,7 +1,7 @@
 [gd_resource type="Theme" load_steps=9 format=3 uid="uid://baoufyvwhelbn"]
 
 [ext_resource type="FontFile" uid="uid://cw6eel7s50w1h" path="res://font.woff" id="1_igr4w"]
-[ext_resource type="Texture2D" uid="uid://bgks0emmnqxx7" path="res://art/spritesheets/GUI.png" id="1_wunqn"]
+[ext_resource type="Texture2D" uid="uid://bgks0emmnqxx7" path="res://art/spritesheets/GUI/GUI.png" id="1_wunqn"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ffjbu"]
 content_margin_left = 4.0

@@ -1,25 +1,26 @@
 [gd_scene load_steps=4 format=3 uid="uid://c2woyananrkj"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_6e4m6"]
-[ext_resource type="Texture2D" uid="uid://boc4wi2y5vyv8" path="res://icon.svg" id="1_glaqa"]
+[ext_resource type="Texture2D" uid="uid://cfqaagydljyv" path="res://art/spritesheets/Sprites/player.png" id="2_0ogvg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_k6ecp"]
-size = Vector2(121, 124)
+size = Vector2(12, 15)
 
 [node name="player" type="CharacterBody2D"]
 script = ExtResource("1_6e4m6")
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_glaqa")
+texture = ExtResource("2_0ogvg")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-0.5, 1)
+position = Vector2(0, 0.5)
 shape = SubResource("RectangleShape2D_k6ecp")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(0.2, 0.2)
+zoom = Vector2(2.3, 2.3)
 position_smoothing_enabled = true
+metadata/_edit_lock_ = true
 
 [node name="hungryTimer" type="Timer" parent="."]
 wait_time = 4.0
