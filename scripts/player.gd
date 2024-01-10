@@ -1,26 +1,20 @@
-class_name PlayerInfo;
 extends CharacterBody2D;
 
-@export var playerSpeed : int = 400;
-@export var playerHungry : int = 5;
+@export var playerSpeed : int = 80;
 
 func get_input():
 	var input_direction = Input.get_vector("move_left", "move_right", "move_up", "move_down");
 	velocity = input_direction * playerSpeed;
-#	PROCESSAMENTO DE FISICA (CADA FPS)
+	if input_direction != Vector2(0, 0) and $FootstepSFX.playing == false:
+		$FootstepSFX.play();
+
 func _physics_process(delta):
 	get_input();
 	var collided = move_and_collide(velocity * delta) # Verifica se esta colidindo.
-	
 	if collided:	# Se estiver vai normalizar a posição (pra não atravessar).
 		velocity = velocity.bounce(collided.get_normal());
-
-func _on_hungry_timer_timeout():	# QUANDO CONTADOR DE FOME ZERAR
-	playerHungry -= 1;
-	print("Barra de fome: " + str(playerHungry));
-	if playerHungry < 1:
-		print("Você morreu de fome!");
+		$FootstepSFX.stop();
 
 func _input(event):
-	if event.is_action_released("test_key_J"):
-		print("Você apertou J");
+	if event.is_action_released("exit_key"):
+		get_tree().quit();
