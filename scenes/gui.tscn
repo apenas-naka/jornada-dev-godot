@@ -1,8 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://cgfmuvum3wcpp"]
+[gd_scene load_steps=2 format=3 uid="uid://d1oju527hrul6"]
 
-[ext_resource type="Texture2D" uid="uid://c2wmeg5kkwbe8" path="res://art/etc/label_bg.png" id="1_uax5u"]
-[ext_resource type="Script" path="res://scripts/gui.gd" id="1_xdoy7"]
-[ext_resource type="Theme" uid="uid://baoufyvwhelbn" path="res://art/default.tres" id="3_0o2pp"]
+[ext_resource type="Script" path="res://scripts/gui.gd" id="1_imba3"]
 
 [node name="GUI" type="Control"]
 layout_mode = 3
@@ -11,74 +9,48 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_xdoy7")
-metadata/_edit_vertical_guides_ = [145.0]
-metadata/_edit_horizontal_guides_ = [140.0]
-metadata/_edit_group_ = true
+script = ExtResource("1_imba3")
+metadata/_edit_use_anchors_ = true
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
-
-[node name="bgControlLabel" type="NinePatchRect" parent="CanvasLayer"]
-offset_left = 14.0
-offset_top = 16.0
-offset_right = 146.0
-offset_bottom = 140.0
-texture = ExtResource("1_uax5u")
-patch_margin_left = 10
-patch_margin_top = 10
-patch_margin_right = 10
-patch_margin_bottom = 10
-
-[node name="hungryLabel" type="Label" parent="CanvasLayer/bgControlLabel"]
-layout_mode = 0
-offset_left = 11.0
-offset_top = 19.0
-offset_right = 117.0
-offset_bottom = 42.0
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="staminaLabel" type="Label" parent="CanvasLayer/bgControlLabel"]
-layout_mode = 0
-offset_left = 11.0
-offset_top = 49.0
-offset_right = 117.0
-offset_bottom = 72.0
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="pointsLabel" type="Label" parent="CanvasLayer/bgControlLabel"]
-layout_mode = 0
-offset_left = 11.0
-offset_top = 79.0
-offset_right = 117.0
-offset_bottom = 102.0
-horizontal_alignment = 1
-vertical_alignment = 1
 
 [node name="Commands" type="Panel" parent="CanvasLayer"]
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
-offset_left = 20.0
-offset_top = -53.0
-offset_right = 195.0
+offset_left = 24.0
+offset_top = -104.0
+offset_right = 189.0
+offset_bottom = -24.0
 grow_vertical = 0
 
-[node name="Label" type="Label" parent="CanvasLayer/Commands"]
+[node name="key_Q" type="Label" parent="CanvasLayer/Commands"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -61.0
+offset_top = 8.0
+offset_right = 61.0
+offset_bottom = 31.0
+grow_horizontal = 2
+text = "Press 'Q' to quit"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="chestsCollected" type="Label" parent="CanvasLayer/Commands"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -78.0
-offset_top = -20.0
-offset_right = 79.0
-offset_bottom = 20.0
+offset_left = -67.0
+offset_top = -11.5
+offset_right = 67.0
+offset_bottom = 11.5
 grow_horizontal = 2
 grow_vertical = 2
-theme = ExtResource("3_0o2pp")
-text = "Aperte 'Q' para sair."
+text = "Chests collected: "
 horizontal_alignment = 1
 vertical_alignment = 1

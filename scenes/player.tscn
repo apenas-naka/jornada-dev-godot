@@ -2,12 +2,10 @@
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_6e4m6"]
 [ext_resource type="Texture2D" uid="uid://cfqaagydljyv" path="res://art/spritesheets/Sprites/player.png" id="2_0ogvg"]
+[ext_resource type="AudioStream" uid="uid://d0gwd4tci84bq" path="res://sound/sfx_Footstep.wav" id="3_ot1pr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_k6ecp"]
 size = Vector2(12, 15)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_728p8"]
-size = Vector2(30, 28)
 
 [node name="player" type="CharacterBody2D"]
 script = ExtResource("1_6e4m6")
@@ -21,11 +19,10 @@ position = Vector2(0, 0.5)
 shape = SubResource("RectangleShape2D_k6ecp")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(2.3, 2.3)
+zoom = Vector2(5, 5)
 position_smoothing_enabled = true
 metadata/_edit_lock_ = true
 
-[node name="Detect" type="Area2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Detect"]
-shape = SubResource("RectangleShape2D_728p8")
+[node name="FootstepSFX" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_ot1pr")
+volume_db = -31.0

@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://b45t4dhdee2wd"]
+[gd_scene load_steps=6 format=3 uid="uid://b45t4dhdee2wd"]
 
 [ext_resource type="Texture2D" uid="uid://djed8diednnvk" path="res://art/spritesheets/Sprites/treasure.png" id="1_d0baq"]
 [ext_resource type="Script" path="res://scripts/chest.gd" id="1_lmd4r"]
+[ext_resource type="AudioStream" uid="uid://b1bhicled6th3" path="res://sound/sfx_Pickup2.wav" id="3_s218i"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_afi6k"]
 size = Vector2(10, 10)
@@ -41,5 +42,14 @@ horizontal_alignment = 1
 vertical_alignment = 1
 uppercase = true
 
+[node name="CollectSFX" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_s218i")
+volume_db = -25.0
+
+[node name="timerFree" type="Timer" parent="."]
+wait_time = 0.1
+one_shot = true
+
 [connection signal="body_entered" from="Detection" to="." method="_on_detection_body_entered"]
 [connection signal="body_exited" from="Detection" to="." method="_on_detection_body_exited"]
+[connection signal="timeout" from="timerFree" to="." method="_on_timer_free_timeout"]
